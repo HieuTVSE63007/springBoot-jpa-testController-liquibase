@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: createTable-example
+      author: liquibase-docs
+      changes:
+        - createTable:
+            tableName: student
+            columns:
+              - column:
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                  autoIncrement: true
+                  name: id
+                  type: int
+              - column:
+                  name: firstname
+                  type: varchar(50)
+              - column:
+                  name: lasttname
+                  type: varchar(50)
+              - column:
+                  name: class
+                  type: varchar(50)
